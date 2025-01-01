@@ -1,0 +1,167 @@
+{
+  "format_version": "1.0",
+  "provider_schemas": {
+    "hashicorp.com/edu/hashicups": {
+      "provider": {
+        "version": 0,
+        "block": {
+          "attributes": {
+            "host": {
+              "type": "string",
+              "description_kind": "plain",
+              "optional": true
+            },
+            "password": {
+              "type": "string",
+              "description_kind": "plain",
+              "optional": true,
+              "sensitive": true
+            },
+            "username": {
+              "type": "string",
+              "description_kind": "plain",
+              "optional": true
+            }
+          },
+          "description_kind": "plain"
+        }
+      },
+      "resource_schemas": {
+        "hashicups_order": {
+          "version": 0,
+          "block": {
+            "attributes": {
+              "id": {
+                "type": "string",
+                "description_kind": "plain",
+                "computed": true
+              },
+              "items": {
+                "nested_type": {
+                  "attributes": {
+                    "coffee": {
+                      "nested_type": {
+                        "attributes": {
+                          "description": {
+                            "type": "string",
+                            "description_kind": "plain",
+                            "computed": true
+                          },
+                          "id": {
+                            "type": "number",
+                            "description_kind": "plain",
+                            "required": true
+                          },
+                          "image": {
+                            "type": "string",
+                            "description_kind": "plain",
+                            "computed": true
+                          },
+                          "name": {
+                            "type": "string",
+                            "description_kind": "plain",
+                            "computed": true
+                          },
+                          "price": {
+                            "type": "number",
+                            "description_kind": "plain",
+                            "computed": true
+                          },
+                          "teaser": {
+                            "type": "string",
+                            "description_kind": "plain",
+                            "computed": true
+                          }
+                        },
+                        "nesting_mode": "single"
+                      },
+                      "description_kind": "plain",
+                      "required": true
+                    },
+                    "quantity": {
+                      "type": "number",
+                      "description_kind": "plain",
+                      "required": true
+                    }
+                  },
+                  "nesting_mode": "list"
+                },
+                "description_kind": "plain",
+                "required": true
+              },
+              "last_updated": {
+                "type": "string",
+                "description_kind": "plain",
+                "computed": true
+              }
+            },
+            "description_kind": "plain"
+          }
+        }
+      },
+      "data_source_schemas": {
+        "hashicups_coffees": {
+          "version": 0,
+          "block": {
+            "attributes": {
+              "coffees": {
+                "nested_type": {
+                  "attributes": {
+                    "description": {
+                      "type": "string",
+                      "description_kind": "plain",
+                      "computed": true
+                    },
+                    "id": {
+                      "type": "number",
+                      "description_kind": "plain",
+                      "computed": true
+                    },
+                    "image": {
+                      "type": "string",
+                      "description_kind": "plain",
+                      "computed": true
+                    },
+                    "ingredients": {
+                      "nested_type": {
+                        "attributes": {
+                          "id": {
+                            "type": "number",
+                            "description_kind": "plain",
+                            "computed": true
+                          }
+                        },
+                        "nesting_mode": "list"
+                      },
+                      "description_kind": "plain",
+                      "computed": true
+                    },
+                    "name": {
+                      "type": "string",
+                      "description_kind": "plain",
+                      "computed": true
+                    },
+                    "price": {
+                      "type": "number",
+                      "description_kind": "plain",
+                      "computed": true
+                    },
+                    "teaser": {
+                      "type": "string",
+                      "description_kind": "plain",
+                      "computed": true
+                    }
+                  },
+                  "nesting_mode": "list"
+                },
+                "description_kind": "plain",
+                "computed": true
+              }
+            },
+            "description_kind": "plain"
+          }
+        }
+      }
+    }
+  }
+}
