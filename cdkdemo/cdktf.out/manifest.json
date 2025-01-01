@@ -1,0 +1,16 @@
+{
+  "stacks": {
+    "cdkdemo": {
+      "annotations": [
+      ],
+      "constructPath": "cdkdemo",
+      "dependencies": [
+      ],
+      "name": "cdkdemo",
+      "stackMetadataPath": "stacks/cdkdemo/metadata.json",
+      "synthesizedStackPath": "stacks/cdkdemo/cdk.tf.json",
+      "workingDirectory": "stacks/cdkdemo"
+    }
+  },
+  "version": "0.20.10"
+}

@@ -1,0 +1,52 @@
+{
+  "//": {
+    "metadata": {
+      "backend": "local",
+      "stackName": "cdkdemo",
+      "version": "0.20.10"
+    },
+    "outputs": {
+    }
+  },
+  "provider": {
+    "hashicups": [
+      {
+        "host": "http://localhost:19090",
+        "password": "education",
+        "username": "test123"
+      }
+    ]
+  },
+  "resource": {
+    "hashicups_order": {
+      "coffee_demo": {
+        "//": {
+          "metadata": {
+            "path": "cdkdemo/coffee_demo",
+            "uniqueId": "coffee_demo"
+          }
+        },
+        "items": [
+          {
+            "coffee": {
+              "id": 123.456
+            },
+            "quantity": 123.456
+          }
+        ]
+      }
+    }
+  },
+  "terraform": {
+    "backend": {
+      "local": {
+        "path": "/Users/nieguanglin/go/src/github.com/niegl4/terraform-provider-hashicups/cdkdemo/terraform.cdkdemo.tfstate"
+      }
+    },
+    "required_providers": {
+      "hashicups": {
+        "source": "hashicorp.com/edu/hashicups"
+      }
+    }
+  }
+}
