@@ -1,10 +1,10 @@
 
 # cdktf and terraform ignores
 .terraform
-cdktf.out
+# cdktf.out
 cdktf.log
 *terraform.*.tfstate*
-generated
+# generated
 
 # src https://github.com/github/gitignore/blob/master/Go.gitignore
 # Binaries for programs and plugins
